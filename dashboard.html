@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Panel Principal - Gestión de Laboratorios ULEAM</title>
+</head>
+<body>
+    <div class="container">
+        <img src="c:\Users\RJDV\OneDrive - ULEAM\Imágenes\Uleamnuevo.png" alt="ULEAM" class="logo">
+        <h1>Panel Principal</h1>
+        <div id="user-role"></div>
+        <div id="menu-dashboard">
+            <!-- Solo mostrar botón para los docentes -->
+            <button id="book-lab-btn" style="display: none;" onclick="goToLabReservations()">Reservas de Laboratorio</button>
+            <button id="manage-practices-btn" style="display: none;" onclick="goToManagePractices()">Gestión de Prácticas y Proyectos</button>
+
+            <!-- Solo mostrar botón para el administrador -->
+            <button id="create-user-btn" style="display: none;" onclick="toggleCreateUserForm()">Crear Usuario</button>
+
+            <button onclick="logout()">Cerrar Sesión</button>
+        </div>
+
+        <!-- Formulario para crear nuevos usuarios (inicialmente oculto) -->
+        <div id="create-user-form" style="display: none;">
+            <h2>Crear Nuevo Usuario</h2>
+            <input type="text" id="new-username" placeholder="Usuario" required>
+            <input type="password" id="new-password" placeholder="Contraseña" required>
+            <select id="new-role">
+                <option value="administrador">Administrador</option>
+                <option value="docente">Docente</option>
+                <option value="estudiante">Estudiante</option>
+            </select>
+            <button onclick="createUser()">Guardar Usuario</button>
+            <button onclick="toggleCreateUserForm()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

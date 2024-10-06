@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reservas de Laboratorio - Gestión de Laboratorios ULEAM</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reservas de Laboratorio</h1>
+        <form id="reservation-form">
+            <input type="text" id="lab-name" placeholder="Nombre del Laboratorio" required>
+            <input type="date" id="reservation-date" required>
+            <input type="time" id="start-time" required>
+            <input type="time" id="end-time" required>
+            <button type="submit">Reservar</button>
+            <button type="button" onclick="goToDashboard()">Regresar al Panel Principal</button>
+        </form>
+        <div id="reservations-list">
+            <h2>Reservas Actuales</h2>
+            <ul id="reservations"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

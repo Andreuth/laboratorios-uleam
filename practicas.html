@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gestión de Prácticas y Proyectos - Gestión de Laboratorios ULEAM</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Prácticas y Proyectos</h1>
+        <form id="practice-form">
+            <input type="text" id="practice-name" placeholder="Nombre de la Práctica" required>
+            <input type="text" id="student-name" placeholder="Nombre del Estudiante" required>
+            <button type="submit">Registrar Práctica</button>
+            <button type="button" onclick="goToDashboard()">Regresar al Panel Principal</button>
+        </form>
+        <div id="practices-list">
+            <h2>Prácticas Registradas</h2>
+            <ul id="practices"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
